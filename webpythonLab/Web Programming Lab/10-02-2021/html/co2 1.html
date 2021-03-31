@@ -1,0 +1,164 @@
+<html>
+<head><script>
+
+
+</script>
+</head>
+<body>
+<p id="demo"></p>
+<p id="1"></p>
+
+<input type="button" onclick="funn()" value="helloo">
+
+
+<script language="javascript" type="text/javascript">
+
+var xz=["Maruti","Tara","Mahindra"];
+document.getElementById("demo").innerHTML+="Example of an array : "+xz+"<br>"
+document.getElementById("demo").innerHTML+="<br>";
+var y = xz.sort();
+document.getElementById("demo").innerHTML+="Sorted array : "+y+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+function funn(){
+ var p = prompt("Enter Your name: ", "Amala");
+ if(p!=null){
+ document.getElementById("1").innerHTML="Hello" +p+ "Hai"
+ }
+}
+document.getElementById("demo").innerHTML+="<br>";
+var xy=["BMW","Maruti","hyndai","Fiat","Chevorlate"]
+var t=""
+var i
+for(i=0;i<xy.length;i++)
+{
+t+="<li>"+xy[i]+"</li>"
+}
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="Array Element Listed    "+t+"<br>"
+document.getElementById("demo").innerHTML+="<br>";
+var x=["BMW", "Maruti","hyndai","Fiat","Chevorlate"]
+document.getElementById("demo").innerHTML+="Original array :    " +x+"<br>";
+var z =["Horse","Lion","Rabbit"]
+document.getElementById("demo").innerHTML+="<br>";
+var a1 = x.length
+document.getElementById("demo").innerHTML+="Length of the array :    "+a1+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.push("Lemon")
+document.getElementById("demo").innerHTML+="Array after Lemon is pushed :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x[x.length]="Chikku"
+document.getElementById("demo").innerHTML+="Chikku is pushed to end using index :   "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x[3]="Watermelon";
+document.getElementById("demo").innerHTML+="Element at index 3 is replaced  :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.pop();
+document.getElementById("demo").innerHTML+="Pop operation :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.shift();
+document.getElementById("demo").innerHTML+="Shift  operation :   "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.unshift("Orange");
+document.getElementById("demo").innerHTML+="Unshift  operation :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.splice(2,0,"Chikku","Kiwi")
+document.getElementById("demo").innerHTML+="Array after Splice operation :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+x.reverse();
+document.getElementById("demo").innerHTML+="Array Element Reversed :    "+x+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+var a = x.concat(z)
+var y = x.toString();
+document.getElementById("demo").innerHTML+="Second array :    "+z+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="Concat both arrays :    "+a+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="Array convert to String :    "+y+"<br>";
+document.getElementById("demo").innerHTML+="<br>";
+
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="Math Operations <br>";
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML+="<br>";
+
+document.getElementById("demo").innerHTML += "Rounding an element : "+Math.round(2.38);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Power of  8 : "+Math.pow(8,2);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="PI VAlue : "+Math.PI
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Square Root of 81 : "+Math.sqrt(81);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Absolute value of -81 : "+Math.abs(-81);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Celing value of 8.1 : "+Math.ceil(8.1);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Floor value of 8.1 : "+Math.floor(8.1);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Minimum value among 8,3,4,67,0  is : "+Math.min(8,3,4,67,0);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Max value among 8,3,4,67,0  is : "+Math.max(8,3,4,67,0);
+document.getElementById("demo").innerHTML+="<br>";
+document.getElementById("demo").innerHTML +="Random values : "+Math.random();
+/*
+var d=new Date();
+document.getElementById("demo").innerHTML=Date();
+document.getElementById("demo").innerHTML=d.getTime();
+document.getElementById("demo").innerHTML=d.getDay();
+document.getElementById("demo").innerHTML=d.getHours();
+document.getElementById("demo").innerHTML=d.getMinutes();
+document.getElementById("demo").innerHTML=d.getMonth();*/
+</script>
+
+</body>
+</html>
+
+<!--
+  
+<body> 
+    <p> 
+        Select a radio button and click on Submit. 
+    </p> 
+      
+    Ouestion 1 : 
+    <input type="radio" name="Gender" value="Male">a 
+    <input type="radio" name="Gender" value="Female">b
+    <input type="radio" name="Gender" value="Others">c 
+      
+    <br> 
+      
+    Question 2 : 
+    <input type="radio" name="Food" value="Vegetarian">a 
+    <input type="radio" name="Food" value="Non-Vegetarian">b 
+      
+    <br> 
+      
+    <button type="button" onclick="displayRadioValue()"> 
+        Submit 
+    </button> 
+      
+    <br> 
+      
+    <div id="result"></div> 
+      
+    <script> 
+        function displayRadioValue() { 
+            document.getElementById("result").innerHTML = ""; 
+            var ele = document.getElementsByTagName('input'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                  
+                if(ele[i].type="radio") { 
+                  
+                    if(ele[i].checked) 
+                        document.getElementById("result").innerHTML 
+                                += ele[i].name + " Value: " 
+                                + ele[i].value + "<br>"; 
+                } 
+            } 
+        } 
+    </script> 
+</body> 
+  
+</html> -->

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function string(){
+var a = document.getElementById("o")
+document.write("The String Entered Is : <br/>")
+document.write("<br/>")
+document.write("<br/>"+a.value+"<br/>")
+document.write("<br/>")
+var j=0
+for (i in a.value){
+if(a.value[i]=='e'||a.value[i]=='E'){
+j++
+}
+}
+document.write("The number of times letter 'e' occur is : <br/>")
+document.write("<br/>")
+document.write(j)
+
+}
+</script>
+
+</head>
+<body>
+<h1>Program to find the count of letter 'e' in a given string</h1>
+<label>Enter the String</label><br>
+<input type="text" id="o">
+<input type="submit" onclick="string()">
+</body>
+</html>

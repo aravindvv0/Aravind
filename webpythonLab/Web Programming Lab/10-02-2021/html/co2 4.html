@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<style>
+button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;}
+</style>
+<script>
+function Color(){
+
+var random = Math.floor(Math.random()*16777215).toString(16)
+document.body.style.backgroundColor = "#"+random;
+
+
+}
+</script>
+<body>
+<center><h1>Click the Button to change body color</h1></center>
+<center><button onclick="Color()">Click</button></center>
+
+</body>
+</html>

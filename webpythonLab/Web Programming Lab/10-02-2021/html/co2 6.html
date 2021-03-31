@@ -1,0 +1,144 @@
+<html> 
+  
+<head> 
+    <title> 
+        Online Quize MCQ
+    </title> 
+</head> 
+  
+<body> 
+    <h1> 
+        Online Quize MCQ. Check answers and submit.
+    </h1> 
+	<br>
+	<br>
+      
+    Q1 : What type of language Javascript is :  <br>
+	<br>
+    <input type="radio" name="Q1" value="a">a. Object-Based 
+    <input type="radio" name="Q1" value="b">b. Object-Orientd
+    <input type="radio" name="Q1" value="c">c. High-level
+      
+    <br> 
+     <br>
+	 <br>
+	 <br>
+    Q2 : Which one of the following is also known as conditional expression : <br>
+	<br>
+    <input type="radio" name="Q2" value="a2">a. Switch
+    <input type="radio" name="Q2" value="b2">b. Immediate if
+    <input type="radio" name="Q2" value="c2">c. If-then-else  
+    <br> 
+	<br>
+	<br>
+	<br>
+	Q3 : The function and var are known as : <br>
+	<br>
+    <input type="radio" name="Q3" value="a3">a. Declaration statements
+    <input type="radio" name="Q3" value="b3">b. Keywords
+    <input type="radio" name="Q3" value="c3">c. Datatypes  
+    <br>
+	<br>
+	<br>
+	<br>
+	Q4 : Which of the following type of variable is volatile : <br>
+	<br>
+    <input type="radio" name="Q4" value="a4">a.  Volatile variable
+    <input type="radio" name="Q4" value="b4">b.  Dynamic variable
+    <input type="radio" name="Q4" value="c4">c.  Mutable variable 
+    <br>
+	<br>
+	<br>
+	<br>
+	Q5 : Which of the following is the correct way for calling the Javascript code :  <br>
+	<br>
+    <input type="radio" name="Q5" value="a5">a. Preprocessor
+    <input type="radio" name="Q5" value="b5">b. Function/Method
+    <input type="radio" name="Q5" value="c5">c. Triggering Event 
+    <br>
+	<br>
+      <br>
+	  <br>
+    <button type="button" onclick="displayRadioValue()"> 
+        Submit 
+    </button> 
+      
+    <br> 
+      <h2> Results</h2>
+    <div id="result"></div> 
+      
+    <script> 
+        function displayRadioValue() { 
+            document.getElementById("result").innerHTML = ""; 
+            var ele = document.getElementsByTagName('input'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                  
+                if(ele[i].type="radio") { 
+                  
+                    if(ele[i].checked) {
+					   
+                                
+								if(ele[i].value=='a' && ele[i].name=='Q1'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is correct <br>"
+								
+								
+								}
+								else if(ele[i].value!='a' && ele[i].name=='Q1'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is wrong <br>"
+								
+								}
+								if(ele[i].value=='b2' && ele[i].name=='Q2'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is correct  <br>"
+								
+								}
+								else if(ele[i].value!='b2' && ele[i].name=='Q2'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is wrong <br> "
+								
+								}
+                                if(ele[i].value=='a3' && ele[i].name=='Q3'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ".  is correct <br> "
+								
+								
+								}
+								else if(ele[i].value!='a3' && ele[i].name=='Q3'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is wrong <br>"
+								
+								}
+                                if(ele[i].value=='c4' && ele[i].name=='Q4'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ".  is correct <br> "
+								
+								
+								}
+								else if(ele[i].value!='c4' && ele[i].name=='Q4'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is wrong <br> "
+								
+								}
+                                if(ele[i].value=='b5' && ele[i].name=='Q5'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ".  is correct <br>"
+								
+								
+								}
+								else if(ele[i].value!='b5' && ele[i].name=='Q5'){
+								document.getElementById("result").innerHTML 
+                                += ele[i].name + ". is wrong <br> "
+								
+								}								
+								
+				}
+                } 
+            } 
+        } 
+    </script> 
+</body> 
+  
+</html> 

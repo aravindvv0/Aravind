@@ -1,0 +1,126 @@
+<html>
+<head>
+<style>
+label{
+	font-family:Helvetica, sans-serif;
+	color:yellow;
+}
+
+input{
+border:2px solid black;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;}
+</style>
+<script>
+function ValidateEmail() {
+  var email = document.getElementById('email').value
+  var validRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$/;
+
+  if (email.match(validRegex)) { 
+  
+    
+      alert("Email is Valid");
+    
+   
+    
+
+  } else {
+    
+    
+     alert("Invalid Email");
+	
+   
+
+    
+
+  }
+   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+   var ph = document.getElementById("Ph").value
+  if(ph.match(phoneno))
+        {
+		 
+          alert("Phone number is valid");
+		  
+        }
+      else
+        {
+		
+        
+        alert("Invalid Phone number");
+        }
+		
+		
+   var dt = document.getElementById("dt").value
+   
+   if("1972/01/01" < dt && dt < "2016/01/01")
+        {
+		 
+		 alert("Age between 5 and 50 ");
+		 return true;
+    
+        }
+      else
+        {
+		
+        
+        alert("Age not between 5 and 50");
+        }
+		
+		
+		
+  
+
+}
+
+</script>
+
+
+
+</head>
+<body>
+<p>Create a HTML registration form and to validate the form using JavaScript code</p>
+
+
+<form name="form1">
+<label class="firstname">FULL Name</label>
+<input type="text" placeholder="First Name"><br>
+
+<label>Date of birth</label>
+<input type="date" placeholder="date of birth" id="dt"><br>
+<p id="datep" style="color:red;"></p>
+
+
+
+
+
+<label>Email</label>
+<input type="text" placeholder="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"><br>
+<p id="emailp" style="color:red;"></p>
+<label>Contact Number</label>
+<input type="number" placeholder="Phone Number" id="Ph"><br>
+<p id="php" style="color:red;"></p>
+
+
+
+
+<button onclick="ValidateEmail()">
+SUBMIT
+</button>
+</form>
+
+
+
+
+</body>
+</html>

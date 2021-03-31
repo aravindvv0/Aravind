@@ -1,0 +1,43 @@
+<html>
+<head></head>
+<body>
+
+<h1>Total Marks out of Five Subjects</h1>
+
+<label>Enter the marks of subject 1</label>
+<input type="number" id="m1"><br>
+<label>Enter the marks of subject 2</label>
+<input type="number" id="m2"><br>
+<label>Enter the marks of subject 3</label>
+<input type="number" id="m3"><br>
+<label>Enter the marks of subject 4</label>
+<input type="number" id="m4"><br>
+<label>Enter the marks of subject 5</label>
+<input type="number" id="m5"><br>
+<input type="submit" onclick="fun()"><br>
+<br>
+<b><label>Total marks of all 5 subjects are : </label></b>
+<b><p id="total"></p></b>
+<script>
+function fun(){
+
+var mark1 = document.getElementById("m1").value
+var mark2 = document.getElementById("m2").value
+var mark3 = document.getElementById("m3").value
+var mark4 = document.getElementById("m4").value
+var mark5 = document.getElementById("m5").value
+var total = parseInt(mark1) + parseInt(mark2) + parseInt(mark3) + parseInt(mark4) + parseInt(mark5);
+
+document.getElementById("total").innerHTML = total
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

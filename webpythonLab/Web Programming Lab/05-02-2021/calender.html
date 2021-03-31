@@ -1,0 +1,941 @@
+<html>
+<head>
+<style>
+table.block{
+border-collapse:separate;
+border-spacing:80px;
+background-color:white;
+color:black;
+
+}
+table{
+color:red;
+background-color:lightblue;
+}
+th{
+color:black;
+
+}
+
+</style>
+
+</head>
+<body>
+<div id="search">
+<b><label>Enter a Year</label></b>
+<input type="number" id="demo">
+<input type="submit" onclick="fun()">
+</div>
+<div id="myDIV"style="display:none;">
+<h1 id="year" style="text-align:center;"></h1><h2 style="text-align:center;">Calender</h2>
+<p>Refresh to enter again</p>
+<table class='block'><tr><td>
+<p id="month"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="sunday"></td>
+<td id="monday"></td>
+<td id="tuesday"></td>
+<td id="wednesday"></td>
+<td id="thursday"></td>
+<td id="friday"></td>
+<td id="saturday"></td>
+</tr></table></td>
+<td>
+<p id="feb"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="sunda"></td>
+<td id="monda"></td>
+<td id="tuesda"></td>
+<td id="wednesda"></td>
+<td id="thursda"></td>
+<td id="frida"></td>
+<td id="saturda"></td>
+</tr></table></td>
+</tr><tr><td>
+<p id="mar"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="mar0"></td>
+<td id="mar1"></td>
+<td id="mar2"></td>
+<td id="mar3"></td>
+<td id="mar4"></td>
+<td id="mar5"></td>
+<td id="mar6"></td>
+</tr></table></td>
+<td>
+<p id="apr"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="apr0"></td>
+<td id="apr1"></td>
+<td id="apr2"></td>
+<td id="apr3"></td>
+<td id="apr4"></td>
+<td id="apr5"></td>
+<td id="apr6"></td>
+</tr></table></td></tr>
+<tr><td>
+<p id="may"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="may0"></td>
+<td id="may1"></td>
+<td id="may2"></td>
+<td id="may3"></td>
+<td id="may4"></td>
+<td id="may5"></td>
+<td id="may6"></td>
+</tr></table></td>
+<td>
+<p id="jun"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="jun0"></td>
+<td id="jun1"></td>
+<td id="jun2"></td>
+<td id="jun3"></td>
+<td id="jun4"></td>
+<td id="jun5"></td>
+<td id="jun6"></td>
+</tr></table></td></tr>
+<tr><td>
+<p id="jul"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="jul0"></td>
+<td id="jul1"></td>
+<td id="jul2"></td>
+<td id="jul3"></td>
+<td id="jul4"></td>
+<td id="jul5"></td>
+<td id="jul6"></td>
+</tr></table></td><td>
+<p id="aug"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="aug0"></td>
+<td id="aug1"></td>
+<td id="aug2"></td>
+<td id="aug3"></td>
+<td id="aug4"></td>
+<td id="aug5"></td>
+<td id="aug6"></td>
+</tr></table></td></tr>
+<tr><td>
+<p id="sep"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="sep0"></td>
+<td id="sep1"></td>
+<td id="sep2"></td>
+<td id="sep3"></td>
+<td id="sep4"></td>
+<td id="sep5"></td>
+<td id="sep6"></td>
+</tr></table></td><td>
+<p id="oct"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="oct0"></td>
+<td id="oct1"></td>
+<td id="oct2"></td>
+<td id="oct3"></td>
+<td id="oct4"></td>
+<td id="oct5"></td>
+<td id="oct6"></td>
+</tr></table></td></tr>
+<tr><td>
+<p id="nov"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="nov0"></td>
+<td id="nov1"></td>
+<td id="nov2"></td>
+<td id="nov3"></td>
+<td id="nov4"></td>
+<td id="nov5"></td>
+<td id="nov6"></td>
+</tr></table></td><td>
+<p id="dec"></p>
+<table border='1'><tr>
+<th>Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th></tr>
+<tr>
+<td id="dec0"></td>
+<td id="dec1"></td>
+<td id="dec2"></td>
+<td id="dec3"></td>
+<td id="dec4"></td>
+<td id="dec5"></td>
+<td id="dec6"></td>
+</tr></table></td></tr></table>
+</div>
+
+<script>
+function fun(){
+
+var hide = document.getElementById("myDIV");
+if (hide.style.display === "none")
+{
+hide.style.display = "block";
+}
+else{
+hide.style.display = "none";
+}
+var hide = document.getElementById("search");
+if (hide.style.display === "none")
+{
+hide.style.display = "block";
+}
+else{
+hide.style.display = "none";
+}
+var d=new Date();
+var a = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+/*document.getElementById("demo").innerHTML=Date();*/
+n=document.getElementById("demo").value;
+var b = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+document.getElementById("year").innerHTML = n;
+d.setFullYear(n)
+
+d.setMonth(0)
+document.getElementById("month").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sunday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("monday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("tuesday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("wednesday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("thursday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("friday").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("saturday").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(1)
+d.setMonth(1)
+document.getElementById("feb").innerHTML = b[d.getMonth()]
+
+if ((n % 4) == 0){
+    if ((n % 100) == 0){
+        if ((n % 400) == 0){
+             for(i=1;i<30;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sunda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("monda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("tuesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("wednesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("thursda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("frida").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("saturda").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}} else{for(i=1;i<29;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sunda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("monda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("tuesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("wednesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("thursda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("frida").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("saturda").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}} 
+}
+else{
+for(i=1;i<30;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sunda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("monda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("tuesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("wednesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("thursda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("frida").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("saturda").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+}
+}else{
+for(i=1;i<29;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sunda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("monda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("tuesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("wednesda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("thursda").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("frida").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("saturda").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}}
+                                       
+                                   
+
+         
+
+
+d.setMonth(2)
+document.getElementById("mar").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("mar0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("mar1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("mar2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("mar3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("mar4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("mar5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("mar6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(3)
+d.setMonth(3)
+document.getElementById("apr").innerHTML = b[d.getMonth()]
+
+for(i=1;i<31;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("apr0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("apr1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("apr2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("apr3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("apr4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("apr5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("apr6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(4)
+document.getElementById("may").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("may0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("may1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("may2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("may3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("may4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("may5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("may6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(5)
+d.setMonth(5)
+document.getElementById("jun").innerHTML = b[d.getMonth()]
+
+for(i=1;i<31;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("jun0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("jun1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("jun2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("jun3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("jun4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("jun5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("jun6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(6)
+document.getElementById("jul").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("jul0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("jul1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("jul2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("jul3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("jul4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("jul5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("jul6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(7)
+document.getElementById("aug").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("aug0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("aug1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("aug2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("aug3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("aug4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("aug5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("aug6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(8)
+d.setMonth(8)
+document.getElementById("sep").innerHTML = b[d.getMonth()]
+
+for(i=1;i<31;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("sep0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("sep1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("sep2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("sep3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("sep4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("sep5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("sep6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(9)
+document.getElementById("oct").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("oct0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("oct1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("oct2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("oct3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("oct4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("oct5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("oct6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(10)
+d.setMonth(10)
+document.getElementById("nov").innerHTML = b[d.getMonth()]
+
+for(i=1;i<30;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("nov0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("nov1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("nov2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("nov3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("nov4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("nov5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("nov6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+d.setMonth(11)
+document.getElementById("dec").innerHTML = b[d.getMonth()]
+
+for(i=1;i<32;i++){
+d.setDate(i)
+if (d.getDay()==0){
+
+document.getElementById("dec0").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==1){
+
+document.getElementById("dec1").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==2){
+
+document.getElementById("dec2").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==3){
+
+document.getElementById("dec3").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==4){
+
+document.getElementById("dec4").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==5){
+
+document.getElementById("dec5").innerHTML += (d.getDate()+"<br/>")
+
+}
+if (d.getDay()==6){
+
+document.getElementById("dec6").innerHTML += (d.getDate()+"<br/>")
+
+}
+
+}
+
+
+
+}
+/*
+document.getElementById("demo").innerHTML=d.getMinutes();
+
+document.getElementById("demo").innerHTML=d.getDay();
+document.getElementById("demo").innerHTML=d.getHours();
+document.getElementById("demo").innerHTML=d.getMinutes();
+document.getElementById("demo").innerHTML=d.getMonth();
+
+
+*/
+
+</script>
+</body>
+</html>

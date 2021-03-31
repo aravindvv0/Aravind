@@ -1,0 +1,24 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+         
+            function over() {
+               document.getElementById('sec').innerHTML="Mouse pointer is now over the div";
+			   document.getElementById('contain').style.backgroundImage="url(cloud.jpg)";
+            }            
+            function out() {
+               document.getElementById('sec').innerHTML="Mouse pointer is now out of the div";
+			   document.getElementById('contain').style.backgroundImage="url(galaxy.jpg)";
+			   document.getElementById('contain').style.backgroundRepeat="no-repeat";
+            }            
+         
+      </script>      
+   </head>
+   
+   <body>
+      <p id="p">Mouse over Div</p>      
+      <div style="background-image: url('galaxy.jpg'); height:500px;" onmouseover = "over()" onmouseout = "out()" id="contain">
+         <center><h2 id="sec" style="color:red;"> This is the Div </h2></center>
+      </div>         
+   </body>
+</html>
